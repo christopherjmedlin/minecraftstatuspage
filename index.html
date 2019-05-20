@@ -24,6 +24,18 @@
             .bad {
                 color: red;
             }
+
+            #gh, #gh:visited {
+                color: black;
+            }
+
+            #gh:hover {
+                color: grey;
+            }
+
+            .fa-github {
+                margin-top: 30px;
+            }
         </style>
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -40,6 +52,7 @@
             {% else %}
             <p class="bad"><i class="far fa-sad-tear"></i> Boomtown is down</p>           
             {% endif %}
+            <a id="gh" href="https://github.com/christopherjmedlin/minecraftstatuspage"><i class="fab fa-github"></i></a>
         </div>
     </body>
 </html>
