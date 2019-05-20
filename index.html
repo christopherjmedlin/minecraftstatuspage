@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Boomtown Status</title>
+        <style>
+            body {
+                background-image: url("http://4.bp.blogspot.com/-xfK7QZY_KPQ/T6AuJeW1onI/AAAAAAAABN8/_8ZiHTUCBUg/s1600/Minecraft_snow.jpg");
+                background-size: 50px 50px;
+
+                font-family: 'Open Sans', sans-serif;
+                text-align: center;
+            }
+            
+            #center {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .good {
+                color: green;
+            }
+
+            .bad {
+                color: red;
+            }
+        </style>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    </head>
+    
+    <body>
+        <div id="center">
+            <h1>mc.boomtown.xyz</h1>
+            {% if online %}
+            <p class="good"><i class="fas fa-check"></i> Boomtown is online</p>
+            <p class="good">Running <b>v{{version}}</b></p>
+            <p class="good"><i class="fas fa-users"></i> {{players}}/{{max_players}}</p>
+            {% else %}
+            <p class="bad"><i class="far fa-sad-tear"></i> Boomtown is down</p>           
+            {% endif %}
+        </div>
+    </body>
+</html>
